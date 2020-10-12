@@ -7,26 +7,26 @@ import (
 
 func main() {
 
-	var i ironman
-	var w wolverine
+	var i homepage
+	var w aboutpage
 
 	mux := http.NewServeMux()
-	mux.Handle("/ironman", i)
-	mux.Handle("/wolverine", w)
+	mux.Handle("/homepage", i)
+	mux.Handle("/aboutpage", w)
 
 	http.ListenAndServe(":8080",mux)
 
 }
 
 
-type ironman int
+type homepage int
 
-func (x ironman) ServeHTTP(res http.ResponseWriter,r *http.Request){
-	io.WriteString(res , "Mr. Iron!")
+func (x homepage) ServeHTTP(res http.ResponseWriter,r *http.Request){
+	io.WriteString(res , "Hi  HomePage !")
 }
 
-type wolverine int
+type aboutpage int
 
-func (x wolverine) ServeHTTP(res http.ResponseWriter,r *http.Request){
-	io.WriteString(res , "Mr. Wolverine!")
+func (x aboutpage) ServeHTTP(res http.ResponseWriter,r *http.Request){
+	io.WriteString(res , "Hi  AboutPage!")
 }
