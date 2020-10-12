@@ -1,10 +1,10 @@
 # net/http package is used in this code
 
-# Create web server
+- Create web server
 
-# Create custom Handler
+- Create custom Handler
 
-# Getting data with queryString
+- Getting data with queryString
 
 
 @mkilic
