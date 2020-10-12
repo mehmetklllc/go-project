@@ -7,12 +7,12 @@ import (
 
 func main() {
 
-	var i homepage
-	var w aboutpage
+	var home homepage
+	var about aboutpage
 
 	mux := http.NewServeMux()
-	mux.Handle("/homepage", i)
-	mux.Handle("/aboutpage", w)
+	mux.Handle("/homepage", home)
+	mux.Handle("/aboutpage", about)
 
 	http.ListenAndServe(":8080",mux)
 
