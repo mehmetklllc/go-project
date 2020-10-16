@@ -7,4 +7,4 @@
 - Getting data with queryString
 
 
-@mkilic
+- @mkilic
