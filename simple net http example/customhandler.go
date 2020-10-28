@@ -25,6 +25,7 @@ func (x homepage) ServeHTTP(res http.ResponseWriter,r *http.Request){
 	io.WriteString(res , "Hi  HomePage !")
 }
 
+
 type aboutpage int
 
 func (x aboutpage) ServeHTTP(res http.ResponseWriter,r *http.Request){
