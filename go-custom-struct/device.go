@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type Device1 struct {
+type Device struct {
 	ID       string
 	NAME string
 	DATE     time.Time
@@ -13,8 +13,8 @@ type Device1 struct {
 	VALUE    string
 }
 
-func NewDevice1(id , name , property , value string, date time.Time)  *Device1{
-	d := new(Device1)
+func NewDevice(id , name , property , value string, date time.Time)  *Device1{
+	d := new(Device)
 	d.ID = id
 	d.NAME= name
 	d.DATE = date
