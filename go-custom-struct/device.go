@@ -13,7 +13,7 @@ type Device struct {
 	VALUE    string
 }
 
-func NewDevice(id , name , property , value string, date time.Time)  *Device1{
+func NewDevice(id , name , property , value string, date time.Time)  *Device{
 	d := new(Device)
 	d.ID = id
 	d.NAME= name
