@@ -2,11 +2,11 @@ package mkilic
 
 import (
 	"encoding/json"
-	"github.com/mehmetklllc/go-project/go-custom-struct"
+	
 	"log"
 )
 
-func ObjectTojson(device mkilic.Device) string {
+func ObjectTojson(device Device) string {
 
 	var jsonData []byte
 	jsonData,err := json.Marshal(device)
@@ -17,9 +17,9 @@ func ObjectTojson(device mkilic.Device) string {
 	return string(jsonData)
 }
 
-func JsonToObject(jsonData []byte) mkilic.Device {
+func JsonToObject(jsonData []byte) Device {
 
-	var unDevice mkilic.Device
+	var unDevice Device
 	_ = json.Unmarshal(jsonData, &unDevice)
 
 	return unDevice
