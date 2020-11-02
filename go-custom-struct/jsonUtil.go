@@ -16,7 +16,7 @@ func ObjectTojson(device *Device) string {
 	return string(jsonData)
 }
 
-func JsonToObject(jsonData []byte) *Device {
+func JsonToObject(jsonData []byte) Device {
 
 	var unDevice Device
 	_ = json.Unmarshal(jsonData, &unDevice)
