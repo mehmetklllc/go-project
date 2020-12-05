@@ -19,7 +19,6 @@ func Consumer(queue amqp.Queue, channel *amqp.Channel,collection *mongo.Collecti
 	)
 	FailOnError(err, "Failed to register a consumer")
 
-
     runtime.GOMAXPROCS(8)
 	forever := make(chan bool)
 	go func() {
