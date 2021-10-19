@@ -6,6 +6,7 @@ import (
 	"runtime"
 )
 
+
 func Consumer(queue amqp.Queue, channel *amqp.Channel,collection *mongo.Collection ) {
 
 	msgs, err := channel.Consume(
