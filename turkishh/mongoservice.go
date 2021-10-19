@@ -28,6 +28,4 @@ func ConnectionAndGetCollection(url ,dbName ,collectionName string)  *mongo.Coll
 func Save(jsonObject string,collection *mongo.Collection)  {
 	object := mkilic.JsonToObject([]byte(jsonObject))
 	go collection.InsertOne(context.TODO(), object)
-
-
 }
